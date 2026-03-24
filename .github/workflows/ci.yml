@@ -61,6 +61,6 @@ jobs:
         - if: matrix.platform == 'ubuntu-latest'
           name: Conditional apt
           run: |
-            apt update
-            apt upgrade
+            sudo apt update
+            sudo apt upgrade
             echo "Apt packages up to date"
