@@ -15,7 +15,7 @@ jobs:
       - name: Install markdown slides
         run: pip install markdown-slides
       - name: Generate slides
-        run: mdslides slides.md --output_dir slides
+        run: python -m mdslides slides.md --output_dir slides
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
