@@ -1,7 +1,10 @@
+name: My CI workflow
 on: 
   push:
 jobs:
   hello:
+    name: My Hello Job
     runs-on: ubuntu-latest
     steps:
         - run: echo "Hello World"
+          name: Print hello world
