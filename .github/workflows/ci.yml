@@ -15,7 +15,7 @@ jobs:
           run: echo "second"
   goodbye:
     name: My Goodbye Job
-    needs: [hello, test]
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - run: echo "goodbye"
