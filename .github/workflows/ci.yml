@@ -60,4 +60,7 @@ jobs:
           run: pytest -vv
         - if: matrix.platform == 'ubuntu-latest'
           name: Conditional apt
-          run: apt update
+          run: |
+            apt update
+            apt upgrade
+            echo "Apt packages up to date"
