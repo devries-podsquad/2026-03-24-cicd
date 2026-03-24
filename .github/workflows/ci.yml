@@ -12,8 +12,16 @@ jobs:
           run: echo "second"
   goodbye:
     name: My Goodbye Job
-    needs: hello
+    needs: [hello, test]
     runs-on: ubuntu-latest
     steps:
       - run: echo "goodbye"
         name: Say by bye
+  test:
+    name: Test the Python Package
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install the package
+          run: pip install .[test]
+        - name: Run the tests
+          run: pytest -vv
